@@ -8,6 +8,7 @@ str_otvet = ''
 n = 0
 
 print('control  ', int_time, int_time/2)  # контрольная проверка - в готовом варианте не требуется
+print('запуск программы!') # лог для запуска программы
 
 def task_generator(int_time):
     for i in range(9, 1, -1):

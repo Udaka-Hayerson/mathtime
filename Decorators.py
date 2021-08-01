@@ -23,16 +23,16 @@
 ### DECORATORS
 
 # HOF high order function (функция высшего порядка)
-def myDecorator(anyFunction):
-    def newFunction(user):
-        print(f'function has benn runned by {user} at {datetime.now().time()}')
-        anyFunction()
-
-    return newFunction
-
-@myDecorator
-def sayHello():
-    print('Hello from sayHello function!')
+# def myDecorator(anyFunction):
+#     def newFunction(user):
+#         print(f'function has benn runned by {user} at {datetime.now().time()}')
+#         anyFunction()
+#
+#     return newFunction
+#
+# @myDecorator
+# def sayHello():
+#     print('Hello from sayHello function!')
 
 
 

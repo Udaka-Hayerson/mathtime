@@ -9,13 +9,11 @@ str_otvet = ''
 n = 0
 comparison = ''
 
-def deep_copy_result(result):
-    asnw_copy = copy.deepcopy(str(result))
-    return asnw_copy
-
+def deep_copy_result(get_time):
+    asnw_copy = copy.deepcopy(get_time)
+    return str(asnw_copy)
 
 class Multiply:
-    comparison = deep_copy_result(int_time)
     def __init__(self, time):
         self.time = int_time
 
@@ -31,7 +29,6 @@ class Multiply:
                         return f'{int(n)} * {i} + {j} = '  # выводим на экран задачку для пользователя
 
 class HargMultiply:
-    comparison = deep_copy_result(int_time)
     def __init__(self, time):
         self.time = int_time
 
@@ -48,7 +45,6 @@ class HargMultiply:
                         return f'{int(n)} * {i} + {j} = '  # выводим на экран задачку для пользователя
 
 class DivideUp:
-    comparison = deep_copy_result(int_time)
     def __init__(self, time):
         self.time = int_time
 
@@ -58,7 +54,6 @@ class DivideUp:
         return f'{n} ÷ {p} = '
 
 class DivideUpHard:
-    comparison = deep_copy_result(int_time)
     def __init__(self, time):
         self.time = int_time
 
@@ -69,7 +64,6 @@ class DivideUpHard:
 
 
 class Plus:
-    comparison = deep_copy_result(int_time)
     def __init__(self, time):
         self.time = int_time
 
@@ -80,7 +74,6 @@ class Plus:
 
 
 class Minus:
-    comparison = deep_copy_result(int_time)
     def __init__(self, time):
         self.time = int_time
 

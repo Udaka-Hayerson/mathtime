@@ -8,6 +8,7 @@ TOKEN = '1773331772:AAH-JkEcVkl1mqcgXdE5GdiTMrE01C-hhio'
 bot = telebot.TeleBot(TOKEN)
 conn = sqlite3.connect('orders.db')   # -------- создаем базу данных для бота в которую будет записывать данные
                                       # -------- пользователя и ответ на текущую задачу функция (def dataBase)на строке
+# lol
 
 @bot.message_handler(commands=['start'])
 def welcome(message):

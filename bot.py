@@ -6,7 +6,8 @@ from datetime import datetime
 
 TOKEN = '1773331772:AAH-JkEcVkl1mqcgXdE5GdiTMrE01C-hhio'
 bot = telebot.TeleBot(TOKEN)
-conn = sqlite3.connect('orders.db')
+conn = sqlite3.connect('orders.db')   # -------- создаем базу данных для бота в которую будет записывать данные
+                                      # -------- пользователя и ответ на текущую задачу функция (def dataBase)на строке
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
@@ -28,7 +29,7 @@ def help(message):
 
 @bot.message_handler(content_types=['text'])
 def keyboard_handler(message):
-    time_args = get_int_time() # преобразовать в запись в файл
+    time_args = get_int_time()   # кроме генерации аргумента для функций
     requests_usr = ''
     guesses_or_knows = str(get_int_time())
     if message.chat.type == 'private':

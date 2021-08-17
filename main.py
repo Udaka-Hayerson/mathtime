@@ -1,7 +1,10 @@
-from bot import bot
-
-bot.polling(none_stop=True)
-
+# from bot import bot
+#
+# bot.polling(none_stop=True)
+import sqlite3
+conn = sqlite3.connect('orders.db')
+cur = conn.cursor()
+cur.execute('')
 # class Car:
 #     brand = 'BMW'
 #     model = 'X-5'

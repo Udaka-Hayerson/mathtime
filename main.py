@@ -1,46 +1,54 @@
-# from bot import bot
-#
-# bot.polling(none_stop=True)
-import sqlite3
-conn = sqlite3.connect('orders.db')
-cur = conn.cursor()
-cur.execute('')
-# class Car:
-#     brand = 'BMW'
-#     model = 'X-5'
-#     engine = 4.4
-#     def setSpeed(self,brand, model, engine):
-#         self.brand = brand
-#         self.model = model
-#         self.engine = engine
-#
-#
-# volga = Car()
-# volga.setSpeed('GAZ','2401', 2.4)
-# print(volga.brand)
-# print(volga.model)
-# print(volga.engine)
-# volvo = Car()
-# volvo.setSpeed('VOLVO', '850 GTL', 2.5)
-# print(volvo.brand)
-# print(volvo.model)
-# print(volvo.engine)
-# bmw = Car()
-# print(bmw.brand)
-# print(bmw.model)
-# print(bmw.engine)
 
-# def square(x):
-#     print('Квадрат чистла', x, '=', x**2)
-# def multyply(x, y):
-#     print(x, '*', y, '=',x * y)
-# def even(x):
-#     if not x % 2:
-#         print(x, 'четное')
-#     else:
-#         print(x, 'Нечетное')
+
+class SpaceObjects:   #  base class/parent class
+
+    def __init__(self, name = '', weight = 0, gravity = 0, revolves_around = '', speed_rotation_axis = 0, speed_revolves_around = 0):
+        self.name = name
+        self.weight = weight
+        self.gravity = gravity
+        self.revolves_around = revolves_around
+        self.speed_rotation_axis = speed_rotation_axis
+        self.speed_revolves_around = speed_revolves_around
+
+    def rotation_around_its_axis(self):
+        return self
+
+    def obj_revolves_arount_obj(self, name, revolves_around):
+        return f'{name} revolves around the {revolves_around} and is in its orbit.'
+
+    @staticmethod
+    def get_info():
+        print('I am static method and I lie here and do nothing')
+
+class Star(SpaceObjects):    #  derived class/child class
+    @classmethod
+    def classmethod(cls):
+        print('Class method called')
+
+    constellation = ''  #созвездие
+    glow = 0
+
+class Planet(SpaceObjects):
+
+    solar_system = ''
+    atmosphere = False
+    orbit = ''
+
+class Satellites(SpaceObjects):
+    pass
+
+
+#     artificial = False  # искусственный
+#     non-circular orbit
+
+# class Comet(SpaceObjects):
 #
-# square(10)
-# multyply(3,15)
-# for i in range(1,101):
-#     even(i*i)
+#     speed = 0
+#     lenght_tail = 0
+#
+# class Asteroids(SpaceObjects):
+#
+#     speed = 0
+#
+# class Spaceships(SpaceObjects):
+#     yearofthelaunch = 0

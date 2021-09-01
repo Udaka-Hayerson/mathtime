@@ -132,3 +132,50 @@
 # sharic = Dog('ShariC', 4) # Sharic_001
 # sharic.baww()
 # sharic.speak()
+#
+#
+# class Animal:
+#     # !! Your home task
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def speak(self):
+#         print('Hello I\'m - ', self.name)
+#
+# class Dog(Animal):
+#     def __init__(self, name, ear = 2):
+#         super(Dog, self).__init__(name)
+#         self.ear = ear
+#
+#     def baww(self):
+#         s = ''
+#         if self.ear > 1:
+#             s = 'tails'
+#         else:
+#             s = 'tail'
+#         print(f'{self.name} have a {self.ear} {s}')
+#
+# class Fish(Animal):
+#     def __init__(self, name, tail):
+#         super(Fish, self).__init__(name)
+#         self.tail = tail
+#
+#     def boolbool(self):
+#         s = ''
+#         if self.tail > 1:
+#             s = 'tails'
+#         else:
+#             s = 'tail'
+#
+#         print(f'{self.name} has {self.tail} {s}')
+#
+#
+#
+#
+# nemo = Fish('Nemo', 1) # Nemo
+# nemo.boolbool()
+# nemo.speak()
+#
+# sharic = Dog('Sharic', 1) # Sharic
+# sharic.baww()
+# sharic.speak()
